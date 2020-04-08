@@ -143,7 +143,7 @@ public class main {
                     break;
 
                 default:
-                    System.out.println("Комманда не распознана");
+                    System.out.println("Команда не распознана");
             }
             if (!pathcollection.isEmpty() && !sc.hasNext()) {
                 sc.close();

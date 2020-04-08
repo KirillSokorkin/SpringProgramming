@@ -56,19 +56,11 @@ public class CommandList {
 
     static void print_unique_minimal_point(TreeSet<LabWork> collection) {
         Iterator<LabWork> iter = collection.iterator();
-        ArrayList<Long> arrayList = new ArrayList<>();
+        TreeSet<Long> MB = new TreeSet<>();
         while (iter.hasNext()) {
             LabWork temp = iter.next();
-            if(arrayList.contains(temp.getMinimalPoint()))
-            {
-                return;
-            }
-            else{
-                arrayList.add(temp.getMinimalPoint());
-                System.out.println(temp.getMinimalPoint());
-
-            }
-
+            MB.contains(temp.getMinimalPoint());
+                System.out.println(MB);
         }
     }
 
@@ -250,9 +242,6 @@ public class CommandList {
             LabWork temp = iter.next();
             QB.add(temp.getPersonalQualitiesMinimum());
         }
-        Iterator<Long> iter1 = QB.iterator();
-        while (iter1.hasNext()) {
-            System.out.println(iter1);
-        }
+            System.out.println(QB);
     }
 }
