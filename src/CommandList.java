@@ -1,5 +1,6 @@
 /**
  * @author Кирилл Сокоркин R3137
+ * Данный класс содержит реализацию всех команд данной программы
  */
 import java.sql.SQLOutput;
 import java.time.LocalDateTime;
@@ -44,7 +45,7 @@ public class CommandList {
         }
     }
 
-    static LabWork remove_by_id(int id, TreeSet<LabWork> collection) {
+    static LabWork remove_by_id(long id, TreeSet<LabWork> collection) {
         Iterator<LabWork> iter = collection.iterator();
 
         while (iter.hasNext()) {
@@ -64,7 +65,7 @@ public class CommandList {
         }
     }
 
-    static LabWork remove_lower(int id, TreeSet<LabWork> collection) {
+    static LabWork remove_lower(long id, TreeSet<LabWork> collection) {
         Iterator<LabWork> iter = collection.iterator();
         while (iter.hasNext()) {
             LabWork temp = iter.next();
@@ -74,7 +75,7 @@ public class CommandList {
         return null;
     }
 
-    static LabWork remove_greater(int id, TreeSet<LabWork> collection) {
+    static LabWork remove_greater(long id, TreeSet<LabWork> collection) {
         Iterator<LabWork> iter = collection.iterator();
         while (iter.hasNext()) {
             LabWork temp = iter.next();
@@ -185,24 +186,17 @@ public class CommandList {
             }
             else break;
         }
+
         Discipline discipline = new Discipline(str_discipline, 0, 0, 0, 0);
-        sc.close();
 
         return new LabWork(name, coordinates, minimal_point, personalQualitiesMinimum, description, difficulty, discipline);
-    }
-
-    static LabWork add_if_min(TreeSet<LabWork> collection) {
-        LabWork temp = add();
-        if (temp.compareTo(collection.first()) < 0)
-            return temp;
-        else return null;
     }
 
     static void clear(TreeSet<LabWork> collection) {
         collection.clear();
     }
 
-    static void update(int id, TreeSet<LabWork> collection) {
+    static void update(long id, TreeSet<LabWork> collection) {
         Iterator<LabWork> iter = collection.iterator();
 
         while (iter.hasNext()) {

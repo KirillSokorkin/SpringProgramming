@@ -1,10 +1,11 @@
+
+import java.time.LocalDate;
 /**
  * @author Кирилл Сокоркин R3137
+ * От данного класса создаются все Лабораторные Работы
  */
-import java.time.LocalDate;
-
 public class LabWork implements Comparable<LabWork>{
-    private int id; //Значение поля должно быть больше 0, Значение этого поля должно быть уникальным, Значение этого поля должно генерироваться автоматически
+    private long id; //Значение поля должно быть больше 0, Значение этого поля должно быть уникальным, Значение этого поля должно генерироваться автоматически
     private String name; //Поле не может быть null, Строка не может быть пустой
     private Coordinates coordinates; //Поле не может быть null
     private java.time.LocalDate creationDate; //Поле не может быть null, Значение этого поля должно генерироваться автоматически
@@ -39,99 +40,67 @@ public class LabWork implements Comparable<LabWork>{
         if (this.id < o.id) return -1;
         return 0;
     }
-    /**
-     * @param name Название
-     */
+
     public void setName(String name) {
         this.name = name;
     }
-    /**
-     * @param coordinates Координаты
-     */
+
     public void setCoordinates(Coordinates coordinates) {
         this.coordinates = coordinates;
     }
-    /**
-     * @param minimalPoint Минимальный балл
-     */
+
     public void setMinimalPoint(Long minimalPoint) {
         this.minimalPoint = minimalPoint;
     }
-    /**
-     * @param personalQualitiesMinimum Минимальный балл за Личностные Качества
-     */
+
     public void setPersonalQualitiesMinimum(Long personalQualitiesMinimum) {
         this.personalQualitiesMinimum = personalQualitiesMinimum;
     }
-    /**
-     * @param description Описание
-     */
+
     public void setDescription(String description) {
         this.description = description;
     }
-    /**
-     * @param difficulty Сложность
-     */
+
     public void setDifficulty(Difficulty difficulty) {
         this.difficulty = difficulty;
     }
-    /**
-     * @param discipline Название Дисциплины
-     */
+
     public void setDiscipline(Discipline discipline) {
         this.discipline = discipline;
     }
-    /**
-     * @return ID Объекта
-     */
-    public int getId() {
+
+    public long getId() {
         return id;
     }
-    /**
-     * @return Название Объекта
-     */
+
     public String getName() {
         return name;
     }
-    /**
-     * @return Координаты Объекта
-     */
+
     public Coordinates getCoordinates() {
         return coordinates;
     }
-    /**
-     * @return Дату создания Объекта
-     */
+
     public LocalDate getCreationDate() {
         return creationDate;
     }
-    /**
-     * @return Минимальный балл Объекта
-     */
+
     public Long getMinimalPoint() {
         return minimalPoint;
     }
-    /**
-     * @return Минимальный балл за Личностные качества Объекта
-     */
+
     public Long getPersonalQualitiesMinimum() {
         return personalQualitiesMinimum;
     }
-    /**
-     * @return Описание Объекта
-     */
+
     public String getDescription() {
         return description;
     }
-    /**
-     * @return Сложность Объекта
-     */
+
     public Difficulty getDifficulty() {
         return difficulty;
     }
-    /**
-     * @return Название Дисциплины Объекта
-     */
+
     public Discipline getDiscipline() {
         return discipline;
     }

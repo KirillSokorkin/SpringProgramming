@@ -5,7 +5,10 @@ import java.io.IOException;
 import java.util.Iterator;
 import java.util.Scanner;
 import java.util.TreeSet;
-
+/**
+ * @author Кирилл Сокоркин R3137
+ * Данный класс позволяет работать с Файлами на компьютере
+ */
 public class FileWorker {
     private String path;
 

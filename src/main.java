@@ -4,7 +4,10 @@ import java.time.LocalDateTime;
 import java.util.HashSet;
 import java.util.Scanner;
 import java.util.TreeSet;
-
+/**
+ * @author Кирилл Сокоркин R3137
+ * Данный класс осуществляет работу всей программы
+ */
 public class main {
     public static void main(String [] args) throws FileNotFoundException {
 
@@ -78,11 +81,12 @@ public class main {
 
                 case "remove_by_id":
                     try {
-                        int id = Integer.parseInt(commandParts[1]);
+                        long id = Integer.parseInt(commandParts[1]);
                         collection.remove(CommandList.remove_by_id(id, collection));
                     } catch (Exception e1) {
                         System.out.println("ID не найден ");
                     }
+                    break;
 
                 case "remove_greater":
                     try {
@@ -91,6 +95,7 @@ public class main {
                     } catch (Exception e) {
                         System.out.println("ID не найден");
                     }
+                    break;
 
                 case "remove_lower":
                     try {
@@ -99,19 +104,12 @@ public class main {
                     } catch (Exception e2) {
                         System.out.println("ID не найден");
                     }
-
-                case "add_if_min":
-                    LabWork A = CommandList.add_if_min(collection);
-                    if (A!=null)
-                        collection.add(A);
-
                     break;
 
                 case "add_if_max":
                     LabWork B = CommandList.add_if_max(collection);
                     if (B!=null)
                         collection.add(B);
-
                     break;
 
                 case "update":
@@ -133,6 +131,7 @@ public class main {
                         pathcollection.remove(commandParts[1]);
                     }
                     break;
+
                 case "save":
                     try{
                         current.writetoFile(collection);
@@ -149,6 +148,7 @@ public class main {
                 sc.close();
                 return true;
             }
+
             input = sc.nextLine();
         }
         sc.close();
