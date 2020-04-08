@@ -1,6 +1,7 @@
 /**
  * @author Кирилл Сокоркин R3137
  */
+import java.sql.SQLOutput;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -240,5 +241,18 @@ public class CommandList {
         }
         double rez = sum / quan;
         System.out.println("Средний Минимальный Балл Коллекции : " + rez);
+    }
+
+    static void print_field_ascending_personal_qualities_minimum(TreeSet<LabWork> collection) {
+        Iterator<LabWork> iter = collection.iterator();
+        TreeSet<Long> QB = new TreeSet<>();
+        while (iter.hasNext()) {
+            LabWork temp = iter.next();
+            QB.add(temp.getPersonalQualitiesMinimum());
+        }
+        Iterator<Long> iter1 = QB.iterator();
+        while (iter1.hasNext()) {
+            System.out.println(iter1);
+        }
     }
 }

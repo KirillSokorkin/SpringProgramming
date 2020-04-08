@@ -72,6 +72,10 @@ public class main {
                     CommandList.clear(collection);
                     break;
 
+                case "print_field_ascending_personal_qualities_minimum":
+                    CommandList.print_field_ascending_personal_qualities_minimum(collection);
+                    break;
+
                 case "remove_by_id":
                     try {
                         int id = Integer.parseInt(commandParts[1]);
