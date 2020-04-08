@@ -117,7 +117,7 @@ public class main {
                         int id = Integer.parseInt(commandParts[1]);
                         CommandList.update(id, collection);
                     } catch (Exception e) {
-                        System.out.println("л");
+                        System.out.println("Данный ID не найден");
                     }
                     break;
 

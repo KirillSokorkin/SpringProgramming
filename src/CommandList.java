@@ -60,9 +60,9 @@ public class CommandList {
         TreeSet<Long> MB = new TreeSet<>();
         while (iter.hasNext()) {
             LabWork temp = iter.next();
-            MB.contains(temp.getMinimalPoint());
-                System.out.println(MB);
+            MB.add(temp.getMinimalPoint());
         }
+        System.out.println(MB);
     }
 
     static LabWork remove_lower(long id, TreeSet<LabWork> collection) {
@@ -71,7 +71,6 @@ public class CommandList {
             LabWork temp = iter.next();
             if (temp.getId() < id) return temp;
         }
-        System.out.println("ID не найден");
         return null;
     }
 
