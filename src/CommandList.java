@@ -127,8 +127,9 @@ public class CommandList {
                 break;
 
             } catch (Exception e) {
-                str_minimalPoint = sc.nextLine();
                 System.out.println("Введите число типа Long или оставьте строку пустой");
+                str_minimalPoint = sc.nextLine();
+
             }
         }
 
@@ -145,8 +146,9 @@ public class CommandList {
                 break;
 
             } catch (Exception e) {
-                str_presQ = sc.nextLine();
                 System.out.println("Введите число типа Long или оставьте строку пустой");
+                str_presQ = sc.nextLine();
+
             }
         }
 
@@ -159,7 +161,7 @@ public class CommandList {
             } else break;
         }
 
-        System.out.println("Введите Сложность для LabWork");
+        System.out.println("Введите Сложность для LabWork(NORMAL,HARD,INSANE,HOPELESS,TERRIBLE");
         String str_difficulty = sc.nextLine();
         Difficulty difficulty;
         while (true) {

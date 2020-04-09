@@ -1,4 +1,3 @@
-
 import java.time.LocalDate;
 /**
  * @author Кирилл Сокоркин R3137
@@ -29,7 +28,6 @@ public class LabWork implements Comparable<LabWork>{
         this.id = this.hashCode();
         this.creationDate = LocalDate.now();
     }
-
     /**
      * @param o Объект класса LabWork
      * @return 1, если ID больше и -1, если ID меньше
@@ -104,7 +102,6 @@ public class LabWork implements Comparable<LabWork>{
     public Discipline getDiscipline() {
         return discipline;
     }
-
     @Override
     public String toString(){
         return "LabWork с id: " + id +'\n'

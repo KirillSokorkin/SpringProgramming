@@ -138,12 +138,8 @@ public class FileWorker {
             current_str+=current.getDiscipline().toString() + "\n";
 
             outstream.write(current_str.getBytes());
-
         }
-
         outstream.close();
         return true;
     }
-
-
 }

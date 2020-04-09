@@ -16,13 +16,12 @@ public class main {
         TreeSet<LabWork> collection = current.readfromFile();
         LocalDateTime creation_date = LocalDateTime.now();
 
-        LabWork ssss = new LabWork("asdf", new Coordinates(1, 2), (long)1, (long)1, "asdfg", Difficulty.HARD, new Discipline("sdf", 0, 0, 0, 0));
+        LabWork ssss = new LabWork("Spring", new Coordinates(20, 20), (long)50, (long)50, "Программа 5", Difficulty.HARD, new Discipline("Программирование", 0, 0, 0, 0));
         collection.add(ssss);
 
         HashSet<String> pathcollection = new HashSet<String>();
 
         commandReading(collection, creation_date, "System.in", pathcollection, current);
-
     }
 
     public static boolean commandReading(TreeSet<LabWork> collection, LocalDateTime creation_date,  String source, HashSet<String> pathcollection, FileWorker current){
@@ -40,6 +39,8 @@ public class main {
                 return false;
             }
         }
+
+        System.out.println("Для просмотра всех команд введите - help");
         String input = sc.nextLine();
 
         while (!input.equals("exit"))
@@ -144,6 +145,7 @@ public class main {
                 default:
                     System.out.println("Команда не распознана");
             }
+
             if (!pathcollection.isEmpty() && !sc.hasNext()) {
                 sc.close();
                 return true;
